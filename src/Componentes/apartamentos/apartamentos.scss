@@ -1,0 +1,246 @@
+.apartamentos {
+  & {
+    background-color: #f2fbff;
+    width: 100%;
+    position: relative;
+    padding-bottom: 5vh;
+  }
+  span,
+  p,
+  li {
+    color: #4d798c;
+  }
+  .texto {
+    & {
+      max-width: 1280px;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 1rem auto;
+      padding: 4rem 3rem;
+    }
+    span {
+      text-align: left;
+      margin-left: 4rem;
+      width: 60%;
+    }
+    h3 {
+      text-align: left;
+    }
+  }
+  .slick-slide {
+    padding: 0 15px;
+    box-sizing: border-box;
+    img {
+      max-width: 100%;
+      height: 400px;
+      margin: auto;
+      object-fit: contain;
+    }
+  }
+  .slick-initialized .slick-track {
+    display: flex;
+    align-items: flex-start;
+  }
+  .aps {
+    & {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2rem;
+    }
+    span {
+      color: white;
+    }
+    .lista {
+      & {
+        list-style-type: none;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: repeat(5, 1fr);
+        column-gap: 2rem;
+      }
+      picture {
+        & {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 4px;
+          background-color: #9fcde4;
+          padding: 1.5rem;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        &.active {
+          & {
+            background-color: #00acf8;
+          }
+          span {
+            color: #acd433;
+          }
+        }
+        h4 {
+          color: white;
+        }
+      }
+    }
+  }
+  .center {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .slider {
+    & {
+      max-width: 600px;
+      margin: auto;
+    }
+    .next_arrow {
+      right: -4rem;
+    }
+    .prev_arrow {
+      left: -4rem;
+    }
+  }
+  .imgSlider {
+    & {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .list_content {
+      & {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+      }
+      .listaCaracteristicas {
+        & {
+          list-style: none;
+          margin: 0 0.5rem;
+        }
+        svg {
+          color: #acd433;
+        }
+        li {
+          padding: 0.3rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .apartamentos {
+    .slider {
+      width: 70%;
+    }
+    .aps {
+      .lista {
+        & {
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas:
+            "a b"
+            "c d"
+            "e e";
+          row-gap: 1rem;
+        }
+        .item1 {
+          grid-area: a;
+        }
+        .item2 {
+          grid-area: b;
+        }
+        .item3 {
+          grid-area: c;
+        }
+        .item4 {
+          grid-area: d;
+        }
+        .item5 {
+          grid-area: e;
+        }
+        picture {
+          padding: 0.8rem;
+        }
+      }
+    }
+    .texto {
+      & {
+        flex-direction: column;
+        padding: 4rem 0;
+        width: 80%;
+        margin: auto;
+      }
+      span {
+        width: auto;
+        margin: 1rem 0;
+        text-align: center;
+        font-size: 0.7rem;
+      }
+      h3 {
+        margin: auto;
+      }
+    }
+    .slick-slide {
+      img {
+        height: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .apartamentos {
+    .texto {
+      & {
+        padding: 2rem 0;
+      }
+      .titulo {
+        padding: 0;
+        text-align: center;
+        &::after {
+          margin: auto;
+          right: 0;
+        }
+      }
+    }
+    .slider {
+      & {
+        width: 90%;
+      }
+      .next_arrow {
+        right: -0.5rem;
+      }
+      .prev_arrow {
+        left: -0.5rem;
+      }
+      .prev_arrow,
+      .next_arrow {
+        font-size: 1rem;
+        text-align: center;
+      }
+      .imgSlider {
+        .list_content {
+          .listaCaracteristicas {
+            li {
+              font-size: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+    .slick-slide {
+      img {
+        height: 250px;
+      }
+    }
+  }
+}

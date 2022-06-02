@@ -1,0 +1,117 @@
+.cabecalho {
+  & {
+    width: 100%;
+    height: 70px;
+    background-color: #0b5b73;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    z-index: 100;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1rem;
+  }
+  .centralizado {
+    & {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: 10vh;
+      margin-right: 10vh;
+      max-width: 200vh;
+    }
+    li {
+      list-style-type: none;
+      align-self: center;
+    }
+  }
+
+  #img {
+    width: 50%;
+    padding: 0 1rem;
+  }
+
+  .Selected {
+    color: #dee9ec;
+    padding: 5px 15px;
+    font-size: 10pt;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .Selected:hover {
+    background-color: #c5e4f2;
+    color: #0b5b73;
+    cursor: pointer;
+  }
+  .menu-toogle {
+    color: #c5e4f2;
+    float: left;
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cabecalho {
+    height: auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .menu {
+      margin-top: 1rem;
+      flex-direction: row;
+      font-size: 0.6rem;
+    }
+    .centralizado {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #img {
+      width: auto;
+      padding: 0;
+    }
+    .Selected {
+      padding: 0 1rem;
+      font-size: inherit;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .cabecalho {
+    .menu-toogle {
+      display: block;
+      position: absolute;
+      left: 1rem;
+      top: 2rem;
+      z-index: 1000;
+    }
+    .menu {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 1rem;
+      z-index: 999;
+      left: 0;
+      background-color: rgba(#0b5b73, 0.9);
+      transition: ease opacity 0.5s;
+      padding-left: 3rem;
+    }
+    .active {
+      opacity: 1;
+      visibility: visible;
+      transition: ease opacity 0.5s;
+    }
+    .Selected {
+      margin: 0.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+}

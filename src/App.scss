@@ -1,0 +1,48 @@
+* {
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  & {
+    font-family: "Teko", sans-serif;
+    text-transform: uppercase;
+  }
+}
+.titulo {
+  font-size: 3rem;
+  color: #00acf8;
+  font-weight: 600;
+}
+.subtitulo{
+  font-size: 1.5rem;
+  color: #00acf8;
+  font-weight: 600;
+}
+.linha{
+  padding-top: 1rem;
+}
+.bordered{
+  position: relative;
+}
+.bordered:after{
+  content: "";
+  border-bottom: 3px solid #acd144;
+  position: absolute;
+  left: 0;
+  width: 40%;
+  bottom: 0;
+}
+@media screen and (max-width:600px){
+  h3{
+    width: 90%;
+    margin: 0 auto;
+  }
+  .titulo{
+    font-size: 30pt;
+  }
+}

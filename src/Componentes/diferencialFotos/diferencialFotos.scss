@@ -1,0 +1,148 @@
+.caixaDiferencialFotos {
+  & {
+    width: 100%;
+    position: relative;
+  }
+  .slick-slide {
+    padding: 0 15px;
+    box-sizing: border-box;
+    img {
+      width: 100%;
+    }
+  }
+  .slick-slider {
+    .next_arrow,
+    .prev_arrow {
+      right: 20px !important;
+      bottom: 10px !important;
+      left: unset !important;
+      top: unset !important;
+      background-color: rgba(0, 0, 0, 0.5) !important;
+      color: #fff !important;
+      font-size: 1.5rem !important;
+      height: auto !important;
+      width: auto !important;
+      padding: 2px 8px;
+      // font-weight: 100 !important;
+    }
+    .prev_arrow {
+      & {
+        right: 58px !important;
+        z-index: 5 !important;
+      }
+    }
+  }
+  .slick-initialized .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  .caixaCaracteristicas {
+    & {
+      background: linear-gradient(90deg, #f2fbff 80%, #fff 20%);
+    }
+    .container {
+      margin: auto;
+      padding: 2rem;
+      max-width: 1280px;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .listaCaracteristicas {
+      width: 40%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .caracteristicas {
+      margin: 20px 10px 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0) invert(77%) sepia(12%) saturate(2034%)
+          hue-rotate(32deg) contrast(88%);
+      }
+      p {
+        margin-top: 0.5rem;
+      }
+    }
+    .titulo {
+      max-width: 450px;
+      line-height: 0.9;
+      margin: 2rem 0;
+      padding-bottom: 1rem;
+    }
+  }
+  .slider {
+    & {
+      width: 100%;
+    }
+
+    // &:hover {
+    //   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    // }
+    img {
+      object-fit: cover;
+    }
+  }
+  .caixaSlider {
+    & {
+      display: flex;
+      flex-direction: column;
+      width: 55%;
+    }
+    p {
+      color: #4d798c;
+      font-size: 0.7rem;
+      padding-left: 15px;
+    }
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  .caixaDiferencialFotos {
+    .caixaCaracteristicas {
+      & {
+        background: #f2fbff;
+        width: 100%;
+        height: auto;
+      }
+      .container {
+        .content {
+          flex-direction: column-reverse;
+        }
+      }
+      .listaCaracteristicas {
+        width: 100%;
+        padding: 0;
+        margin: 1rem 0;
+      }
+      .titulo {
+        width: 100%;
+        text-align: center;
+        margin: 2rem auto;
+        &::after {
+          margin: auto;
+          right: 0;
+        }
+      }
+    }
+    .slider {
+      margin: 0 auto;
+      width: 100%;
+    }
+    .caixaSlider {
+      width: 100%;
+    }
+  }
+}

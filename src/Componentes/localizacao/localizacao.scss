@@ -1,0 +1,283 @@
+.containerMap {
+  & {
+  }
+  span,p,li{
+    color: #4d798c;;
+  }
+  h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .texto {
+    & {
+      max-width: 1280px;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 4rem auto;
+      padding: 0 3rem;
+    }
+    p {
+      text-align: left;
+      width: 60%;
+    }
+  }
+  .map {
+    width: 60%;
+    height: 600px;
+  }
+  .markers {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      width: 40%;
+      padding: 0 4rem;
+    }
+    .subtitulo {
+      max-width: 400px;
+    }
+    .caixaIcones {
+      & {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      span {
+        padding-left: 5px;
+        font-weight: bold;
+        font-size: 0.8rem;
+        color: gray;
+      }
+      .icones {
+        & {
+          margin: 20px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          color: gray;
+        }
+        &.active {
+          &.academia {
+            span {
+              color: #FF7B04;
+            }
+            svg {
+              background: #FF7B04;
+            }
+          }
+          &.padaria {
+            span {
+              color: #3ac0ae;
+            }
+            svg {
+              background: #3ac0ae;
+            }
+          }
+          &.banco {
+            span {
+              color: #ffd700;
+            }
+            svg {
+              background: #ffd700;
+            }
+          }
+          &.restaurante {
+            span {
+              color: #007298;
+            }
+            svg {
+              background: #007298;
+            }
+          }
+          &.escola {
+            span {
+              color: #8232a7;
+            }
+            svg {
+              background: #8232a7;
+            }
+          }
+          &.shopping {
+            span {
+              color: #93d600;
+            }
+            svg {
+              background: #93d600;
+            }
+          }
+          &.farmacia {
+            span {
+              color: #ff4438;
+            }
+            svg {
+              background: #ff4438;
+            }
+          }
+          &.supermercado {
+            span {
+              color: #dc2797;
+            }
+            svg {
+              background: #dc2797;
+            }
+          }
+          &.hospital {
+            span {
+              color: #03adf8;
+            }
+            svg {
+              background: #03adf8;
+            }
+          }
+          &.universidade {
+            span {
+              color: #197b30;
+            }
+            svg {
+              background: #197b30;
+            }
+          }
+
+        }
+      }
+      .rcorners {
+        border-radius: 25px;
+        background: #6c6c6c;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        color: white;
+      }
+    }
+  }
+  .links {
+    & {
+      display: flex;
+      width: 60%;
+      align-items: center;
+      justify-content: center;
+    }
+    .botao {
+      height: 20px;
+      padding-right: 10px;
+    }
+    .borda {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-style: solid;
+      border-color: #77d3fb;
+      border-width: 2px;
+      padding: 0.5rem 1rem;
+      margin: 1rem;
+      width: 35%;
+      text-align: center;
+      color: #4d798c;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+    }
+  }
+  .margin_esquerda{
+    margin: 2rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .containerMap {
+    .content {
+    }
+    .markers {
+      & {
+        padding: 0 1rem;
+      }
+      .subtitulo {
+        text-align: center;
+      }
+      .caixaIcones {
+        .icones {
+          flex-direction: column;
+          margin: 10px;
+          span {
+            padding: 0;
+          }
+        }
+      }
+    }
+    .margin_esquerda{
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerMap {
+    display: flex;
+    flex-direction: column;
+    .content {
+      flex-direction: column-reverse;
+    }
+    .texto {
+      & {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem auto;
+        height: auto;
+      }
+      p {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 0.7rem;
+      }
+      .titulo {
+        width: auto;
+        text-align: center;
+      }
+    }
+    .map {
+      width: 100%;
+      height: 400px;
+    }
+    .markers {
+      & {
+        width: 100%;
+        margin: 1rem;
+      }
+    }
+    .links {
+      & {
+        width: 100%;
+        margin: auto;
+      }
+    }
+    .margin_esquerda{
+      margin: 1rem;
+      font-size: 0.7rem;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .containerMap{
+    .texto{
+      p{
+        font-size: 0.7rem;
+      }
+    }
+    .links{
+      flex-direction: column;
+      .borda{
+        width: 70%;
+        margin: 0.5rem;
+      }
+    }
+  }
+}

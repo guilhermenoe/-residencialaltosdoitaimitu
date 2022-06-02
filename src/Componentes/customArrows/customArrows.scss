@@ -1,0 +1,33 @@
+.slick-slider {
+  .next_arrow,
+  .prev_arrow {
+    &{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 20px;
+        height: 35px;
+        background-color: transparent;
+        border: 0;
+        font-size: 0;
+        z-index: 2;
+        font-weight: 900;
+        font-size: 2rem;
+        color: #00acf8;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+  }
+  .prev_arrow {
+    &{
+        left: -2rem;
+    }
+  }
+  .next_arrow{
+    &{
+        right: -2rem;
+    }
+  }
+}

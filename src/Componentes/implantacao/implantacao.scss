@@ -1,0 +1,122 @@
+.caixaImplantacao {
+  & {
+    background-color: #f2fbff;
+    width: 100%;
+  }
+  span,p,li{
+    color: #4d798c;;
+  }
+  .container {
+    & {
+      max-width: 1280px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .planta {
+      display: flex;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: auto;
+    }
+    .caracteristicas {
+      & {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 2rem auto;
+      }
+      .icones {
+        & {
+          display: flex;
+          align-items: center;
+          height: 50px;
+        }
+        p {
+          color: #4d798c;
+        }
+        img {
+          width: 40px;
+          margin: 0 1rem;
+          object-fit: none;
+        }
+      }
+    }
+  }
+  .texto {
+    & {
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 4rem auto;
+      padding: 0 3rem;
+    }
+    span {
+      text-align: left;
+      margin-left: 4rem;
+    }
+    h3 {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .caixaImplantacao {
+    .container {
+      .caracteristicas {
+        & {
+          width: 90%;
+          grid-template-columns: 1fr 1fr;
+        }
+        .icones {
+          p {
+            font-size: small;
+            padding-right: 0%;
+          }
+          img {
+            width: auto;
+            
+          }
+        }
+      }
+      .texto {
+        & {
+          flex-direction: column;
+          padding: 0;
+        }
+        h3{
+          width: auto;
+          text-align: center;
+          margin: auto;
+        }
+        span {
+          margin-top: 1rem;
+          text-align: center;
+          margin-left: initial;
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:425px){
+  .caixaImplantacao{
+    .container{
+      .texto{
+        margin: 0 auto;
+      }
+      .caracteristicas{
+        .icones{
+          img{
+            width: 15px;
+            object-fit: scale-down;
+            margin: 0 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

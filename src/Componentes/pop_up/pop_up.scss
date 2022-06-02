@@ -1,0 +1,174 @@
+.caixa_modal {
+  & {
+    width: 90%;
+    margin: auto;
+    padding: 2rem 0;
+    overflow: hidden;
+  }
+  h3,
+  p {
+    color: #fff;
+    text-align: center;
+  }
+  .bordered {
+    &::after {
+      right: 0;
+      margin: auto;
+      width: 20%;
+    }
+  }
+  .close {
+    height: 30px;
+    width: 30px;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .sub_caixa {
+    & {
+      width: 80%;
+      margin: auto;
+      padding-top: 2rem;
+    }
+    .inputs {
+      & {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1rem;
+        margin: 0;
+      }
+      input {
+        padding: 0 1rem;
+        height: 2rem;
+        background-color: #c5e4f2;
+        border-radius: 10px;
+        font-weight: bold;
+        color: #4d798c;
+        border: 1px solid transparent;
+        &.error{
+          border: 1px solid red;
+        }
+      }
+      .button {
+        background-color: #ff7b04;
+        color: #fff;
+        height: auto;
+        border-radius: 50px;
+        width: auto;
+        margin: auto;
+        padding: 0.7rem 2rem;
+        font-weight: bold;
+      }
+      .active {
+        margin: 1rem auto;
+        height: 30px;
+        width: 30px;
+        color: #ff7b04;
+        -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite;
+        animation: spin 4s linear infinite;
+      }
+      @-moz-keyframes spin {
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      .inactive {
+        display: none;
+      }
+      .content {
+        & {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+        input {
+          width: 100%;
+          margin: 1rem 0;
+        }
+        .email {
+          margin-right: 1rem;
+        }
+        .tel {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .caixa_modal {
+    & {
+      width: 100%;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    .sub_caixa {
+      .inputs {
+        .nome {
+          margin: 1rem auto;
+          width: 100%;
+        }
+        .content {
+          & {
+            flex-direction: column;
+            justify-content: center;
+          }
+          .email,
+          .tel {
+            margin: 1rem auto;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .caixa_modal {
+    h3 {
+      line-height: 1.5rem;
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 0.7rem;
+    }
+    .sub_caixa {
+      .inputs {
+        .button {
+          font-size: 0.6rem;
+          padding: 0.7rem 1.5rem;
+        }
+        .nome {
+          margin: 0.7rem auto;
+        }
+        .content {
+          .email,
+          .tel {
+            margin: 0.7rem auto;
+          }
+        }
+      }
+    }
+  }
+}
